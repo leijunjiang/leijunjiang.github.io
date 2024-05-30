@@ -3,7 +3,7 @@ layout: page
 title: Resume & CV
 permalink: /resume/
 ---
-[Télécharger CV en PDF](https://github.com/leijunjiang/leijunjiang.github.io/blob/gh-pages/assets/Leijun%20Jiang%20senior%20backend%20developpeur%20fr.pdf)
+[Télécharger CV en PDF](/assets/Leijun%20Jiang%20senior%20backend%20developpeur%20fr.pdf)
 
 
 ### **EXPÉRIENCES**
