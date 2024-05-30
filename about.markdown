@@ -6,7 +6,7 @@ permalink: /about/
 ### <span style="color: #50A3D9;"> SITUATION PROFESSIONELLE </span>
 Développeur **freelance** en backend ou fullstack **Ruby on Rails** et **React**
 
-En <span style="color: green;">recherche active</span> des missions end freelance
+En <span style="color: green;">recherche active</span> des missions en freelance
 
 ### <span style="color: #50A3D9;"> PRÉSENTATION </span>
 
