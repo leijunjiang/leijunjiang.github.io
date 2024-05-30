@@ -3,16 +3,16 @@ layout: page
 title: About
 permalink: /about/
 ---
+### <span style="color: #50A3D9;"> SITUATION PROFESSIONELLE </span>
+Développeur **freelance** en backend ou fullstack **Ruby on Rails** et **React**
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+En <span style="color: green;">recherche active</span> des missions end freelance
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+### <span style="color: #50A3D9;"> PRÉSENTATION </span>
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+Spécialiste du développment informatique dans le domaine de web. 
 
+Je propose mon expertise technique pour déveloper des produists avec la technologie Ruby on Rails.
 
-[jekyll-organization]: https://github.com/jekyll
+Je suis à l'aise de travailler avec une équipe française ou internationale.
+
