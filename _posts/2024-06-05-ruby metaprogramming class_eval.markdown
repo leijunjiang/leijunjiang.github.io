@@ -18,7 +18,7 @@ class A
 end
 
 ```
-Question, how can we use class_eval to reassign the value of B and @@a so that 
+Question, how can we use class_eval to reassign the value of B and @@a so that
 
 B = 'b2'
 
@@ -64,7 +64,7 @@ class C
 end
 ```
 
-Question, how can we do that we don't need to write de code 
+Question, how can we do that we don't need to write the code?
 ```
 set_logger :hi
 
