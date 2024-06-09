@@ -12,7 +12,7 @@ In Sidekiq, there are 3 important classes that we will study the source code
 
 | Class                          | Role                                                         |
 | :----------------------------- | ------------------------------------------------------------ |
-| **Sidekiq::Scheduled::Poller** | check and fetch `scheduled` and `retry` jobs periodically.   |
+| **Sidekiq::Scheduled::Poller** | check and fetch jobs from `scheduled` and `retry` jobs queue periodically.   |
 | **Sidekiq::Manager**           | Create number of workers according to the parameter `concurrency` |
 | **Sickie::Processor**          | exucute the job                                              |
 
