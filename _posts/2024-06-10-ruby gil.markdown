@@ -1,0 +1,111 @@
+---
+layout: post
+title:  "What happens if we remove GIL from ruby."
+date:   2024-06-10 12:00:20 +0200
+categories: jekyll update
+tags: GIL thread
+---
+
+ruby GIL
+
+```ruby
+'gil_test.rb'
+
+array = []
+threads = []
+
+5.times do
+  thread << Thread.new do
+    1000.times { array << nil }
+  end
+end
+
+threads.each(&:join)
+
+puts array.size
+```
+
+### with GIL
+
+if we use ruby with GIL 
+
+```ruby
+$ ruby gil_test.rb
+# => 5000
+```
+
+It returns 5000 as expected: 5 * 1000 = 5000 .
+
+### without GIL
+
+But if we use ruby without GIL, we can install truffleruby: 
+
+**TruffleRuby** is a high-performance implementation of Ruby on the GraalVM and does not have a GIL.
+
+```ruby
+$ ruby gil_test.rb
+# => 3780
+$ ruby gil_test.rb
+# => 3995
+$ ruby gil_test.rb
+# => 4494
+```
+
+Yt returns different result each time. 
+
+The reason behind this chaotic result is because this code `array << nil` is not atomic.
+
+Lets do another experience with a mutex
+
+```ruby
+array = []
+threads = []
+mutex = Mutex.new
+5.times do
+  threads << Thread.new do
+    1000.times do
+      mutex.synchronize do
+        array << nil
+      end
+    end
+  end
+end
+
+threads.each(&:join)
+
+puts array.size
+```
+
+now even with ruby without GIL
+
+```ruby
+$ ruby gil_test.rb
+# => 5000
+
+$ ruby gil_test.rb
+# => 5000
+```
+
+Conclusion, GIL garantiee us a safe thread when we use multi-thread.
+
+---
+
+PS: as we are curious, we can take a look at `<<` 's  source code
+
+```c
+# https://github.com/ruby/ruby/blob/master/array.c
+
+VALUE
+rb_ary_push(VALUE ary, VALUE item)
+{
+    long idx = RARRAY_LEN((ary_verify(ary), ary));
+    VALUE target_ary = ary_ensure_room_for_push(ary, 1);
+    RARRAY_PTR_USE(ary, ptr, {
+        RB_OBJ_WRITE(target_ary, &ptr[idx], item);
+    });
+    ARY_SET_LEN(ary, idx + 1);
+    ary_verify(ary);
+    return ary;
+}
+```
+
