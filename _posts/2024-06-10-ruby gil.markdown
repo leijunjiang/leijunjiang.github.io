@@ -30,6 +30,8 @@ puts array.size
 if we use ruby with GIL 
 
 ```ruby
+$ ruby -v
+# => ruby 3.2.2 (2023-03-30 revision e51014f9c0)
 $ ruby gil_test.rb
 # => 5000
 ```
@@ -43,6 +45,8 @@ But if we use ruby without GIL, we can install truffleruby:
 **TruffleRuby** is a high-performance implementation of Ruby on the GraalVM and does not have a GIL.
 
 ```ruby
+$ ruby -v
+# => truffleruby 23.1.0, like ruby 3.2.2, Oracle GraalVM Native
 $ ruby gil_test.rb
 # => 3780
 $ ruby gil_test.rb
