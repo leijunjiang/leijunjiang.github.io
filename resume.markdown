@@ -93,3 +93,4 @@ ENSEA | <span style="color: #50A3D9;"> Ingénieur généraliste </span>
 - SIRH, Paie
 - comformité, KYC
 - comptabilité
+- Cryptomonnaie
