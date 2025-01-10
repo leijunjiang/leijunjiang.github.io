@@ -12,7 +12,7 @@ En <span style="color: green;">recherche active</span> des missions en freelance
 
 Spécialiste du développment informatique dans le domaine de web. 
 
-Je propose mon expertise technique pour déveloper des produists avec la technologie Ruby on Rails.
+Je propose mon expertise technique pour développer des produits avec la technologie Ruby on Rails.
 
 Je suis à l'aise de travailler avec une équipe française ou internationale.
 
