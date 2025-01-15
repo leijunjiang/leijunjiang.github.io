@@ -96,7 +96,7 @@ end
 - Make sure retry does not send too much error emails
 - Use defensive code to avoid errors
   - data can be corrupted in the middle of the process
-  - the data is already corrupted (e.g. user already deleted softly by gem paranoid). I get fired for this.
+  - the data is already corrupted (e.g. user already deleted softly by gem paranoid).
 
 ## 【Business】
 # Never trust IDs from frontend, always verify
